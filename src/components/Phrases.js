@@ -2,8 +2,8 @@ const PHRASES = [
   { text: "Cada día a tu lado se siente como una página nueva que no quiero dejar de escribir.", tag: "para los días normales" },
   { text: "No fue el momento exacto, fuiste tú haciendo del momento un para siempre.", tag: "el primer pensamiento" },
   { text: "Si me preguntan qué es la calma, voy a señalarte sin pensarlo dos veces.", tag: "mi lugar seguro" },
-  { text: "Te miro y entiendo por qué la gente escribe canciones que no riman.", tag: "confesión silenciosa" },
-  { text: "Eres mi café de la mañana, mi risa boba del mediodía y mi paz de las once.", tag: "rutina favorita" },
+  { text: "Tú bailando, te quiero tanto. Solo eres lo que crees. Lo que quiero, por ti me muero", tag: "mi refugio" },
+  { text: "Eres mi café de la mañana, mi risa boba del mediodía y mi paz toda la vida", tag: "confesión silenciosa" },
   { text: "Hay personas que llegan, otras que se quedan. Tú llegaste para hacerte hogar.", tag: "sin fecha de salida" },
 ];
 
