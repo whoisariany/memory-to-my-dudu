@@ -12,7 +12,6 @@ export function initSurprise(containerId) {
   let pressed = 0;
   let revealed = false;
 
-  // Creamos un contenedor global oculto para la lluvia de corazones
   let heartsContainer = document.getElementById('hearts-container');
   if (!heartsContainer) {
     heartsContainer = document.createElement('div');
@@ -35,7 +34,6 @@ export function initSurprise(containerId) {
       `;
 
       document.getElementById('surprise-btn').addEventListener('click', (e) => {
-        // Calcular posición del clic para los corazones
         const rect = e.currentTarget.getBoundingClientRect();
         const cx = rect.left + rect.width / 2;
         const cy = rect.top + rect.height / 2;
@@ -65,7 +63,7 @@ export function initSurprise(containerId) {
 
         pressed++;
         if (pressed >= 2) revealed = true;
-        render(); // Repintar
+        render(); 
       });
     } else {
       container.innerHTML = `
