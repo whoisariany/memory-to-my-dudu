@@ -1,1 +1,0 @@
-# memory-to-my-dudu

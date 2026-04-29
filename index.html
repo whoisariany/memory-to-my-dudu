@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubu & Dudu — Nuestra historia</title>
+    <meta name="description" content="Una carta digital hecha con amor para Leandro. Cartas, recuerdos y sorpresas — Bubu y Dudu, 21 de agosto de 2025." />
+    <meta name="author" content="Ariany" />
+  </head>
+
+  <body>
+    <main class="relative min-h-screen overflow-x-hidden">
+      <div id="petals-container" class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true"></div>
+
+      <section class="relative min-h-screen flex items-center px-6 sm:px-10 py-20 z-10">
+        <div class="container mx-auto grid lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="reveal lg:col-span-7 relative">
+            <div class="inline-flex items-center gap-3 mb-6">
+              <span class="h-px w-10 bg-terracotta"></span>
+              <span class="text-[11px] uppercase tracking-[0.3em] text-terracotta font-medium">
+                un recuerdo digital
+              </span>
+            </div>
+
+            <h1 class="font-display text-[44px] sm:text-6xl lg:text-7xl xl:text-8xl text-ink leading-[1.02] tracking-[-0.02em] mb-6">
+              Nuestra historia,<br />
+              <span class="italic text-terracotta">escrita</span> en el tiempo.
+            </h1>
+
+            <p class="font-script text-3xl sm:text-4xl text-rose-deep mb-6">
+              Bubu &amp; Dudu
+            </p>
+
+            <p class="font-body text-lg text-ink-faded max-w-md leading-relaxed mb-10">
+              Un espacio solo nuestro, donde guardamos lo que el papel no puede sostener. Hecho con amor, para ti
+            </p>
+
+            <div class="flex flex-wrap items-center gap-6">
+              <a
+                href="#cartas"
+                class="group relative inline-flex items-center gap-3 px-8 py-4 bg-terracotta text-paper font-display text-lg shadow-paper hover:shadow-paper-lg transition-all duration-500 hover:-translate-y-0.5 active:scale-95"
+                style="border-radius: 4px;"
+              >
+                Abre tu primera carta
+                <span class="transition-transform duration-500 group-hover:translate-x-1">→</span>
+              </a>
+              <a
+                href="#sorpresa"
+                class="font-script text-xl text-terracotta underline decoration-rose-deep decoration-2 underline-offset-4 hover:decoration-terracotta transition-colors"
+              >
+                o salta a la sorpresa ♥ :0
+              </a>
+            </div>
+
+            <div class="mt-14" id="date-counter-container"></div>
+          </div>
+
+          <div class="lg:col-span-5 relative h-[400px] sm:h-[520px] flex items-center justify-center">
+            <img
+              src="/src/assets/bubuydudu.png"
+              alt="Flores prensadas"
+              width="1024"
+              height="1024"
+              class="absolute inset-0 m-auto w-[85%] max-w-[480px] animate-float-slow drop-shadow-[0_20px_30px_hsl(12_16%_20%_/_0.15)]"
+            />
+            <img
+              src="/src/assets/eucalyptus.png"
+              alt=""
+              aria-hidden="true"
+              width="1024"
+              height="1024"
+              class="absolute -top-6 -left-6 w-40 sm:w-52 rotate-[-25deg] animate-drift opacity-90"
+              style="animation-delay: -3s;"
+            />
+            <img
+              src="/src/assets/rose-single.png"
+              alt=""
+              aria-hidden="true"
+              width="1024"
+              height="1024"
+              class="absolute -bottom-8 right-0 w-32 sm:w-44 rotate-[15deg] animate-drift"
+              style="animation-delay: -7s;"
+            />
+          </div>
+        </div>
+
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-ink-faded animate-float-slow">
+          desliza ↓
+        </div>
+      </section>
+
+      <section id="cartas" class="relative py-24 sm:py-32 px-6 sm:px-10 z-10">
+        <div class="reveal container mx-auto">
+          
+          <div class="text-center max-w-2xl mx-auto">
+            <div class="inline-flex items-center gap-3 mb-4">
+              <span class="h-px w-8 bg-terracotta"></span>
+              <span class="text-[11px] uppercase tracking-[0.3em] text-terracotta">cartas para ti</span>
+              <span class="h-px w-8 bg-terracotta"></span>
+            </div>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-tight tracking-[-0.01em]">
+              Tres sobres con tu nombre
+            </h2>
+            <p class="mt-5 font-body text-lg text-ink-faded leading-relaxed">
+              Cada uno guarda algo que no me cabe en una conversación. Ábrelos cuando lo necesites.
+            </p>
+          </div>
+
+          <div id="letters-container" class="mt-20 flex flex-wrap justify-center gap-12 sm:gap-16">
+            </div>
+        </div>
+      </section>
+
+      <div id="letter-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 animate-fade-up" style="background: hsl(12 16% 15% / 0.55); backdrop-filter: blur(6px);">
+        <div id="letter-modal-content" class="relative w-full max-w-xl bg-[hsl(42_42%_96%)] paper-card" style="box-shadow: 0 30px 80px hsl(12 16% 10% / 0.35); background-image: repeating-linear-gradient(0deg, transparent, transparent 31px, hsl(14 30% 70% / 0.18) 31px, hsl(14 30% 70% / 0.18) 32px);">
+          </div>
+      </div>
+
+      <section class="relative py-24 sm:py-32 px-6 sm:px-10 z-10 bg-[hsl(38_30%_91%)]/40">
+        <div class="reveal container mx-auto">
+          <div class="text-center max-w-2xl mx-auto">
+            <div class="inline-flex items-center gap-3 mb-4">
+              <span class="h-px w-8 bg-terracotta"></span>
+              <span class="text-[11px] uppercase tracking-[0.3em] text-terracotta">nuestra historia</span>
+              <span class="h-px w-8 bg-terracotta"></span>
+            </div>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-tight tracking-[-0.01em]">
+              Pequeños grandes momentos
+            </h2>
+            <p class="mt-5 font-body text-lg text-ink-faded leading-relaxed">
+              Los momentos que dibujan el mapa de lo nuestro.
+            </p>
+          </div>
+
+          <div id="timeline-container" class="mt-20"></div>
+        </div>
+      </section>
+
+      <section class="relative py-24 sm:py-32 px-6 sm:px-10 z-10">
+        <div class="reveal container mx-auto">
+          <div class="text-center max-w-2xl mx-auto">
+            <div class="inline-flex items-center gap-3 mb-4">
+              <span class="h-px w-8 bg-terracotta"></span>
+              <span class="text-[11px] uppercase tracking-[0.3em] text-terracotta">recuerdos</span>
+              <span class="h-px w-8 bg-terracotta"></span>
+            </div>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-tight tracking-[-0.01em]">
+              Pegados en la página
+            </h2>
+            <p class="mt-5 font-body text-lg text-ink-faded leading-relaxed">
+              (Te amo, me haces muy feliz ♥)
+            </p>
+          </div>
+
+          <div id="gallery-container" class="mt-20"></div>
+        </div>
+      </section>
+
+      <section class="relative py-24 sm:py-32 px-6 sm:px-10 z-10 bg-[hsl(14_30%_88%)]/30">
+        <div class="reveal container mx-auto">
+          <div class="relative">
+            <img src="/src/assets/eucalyptus.png" alt="" aria-hidden="true" width="1024" height="1024" loading="lazy" class="hidden md:block absolute -top-10 -left-4 w-32 rotate-[-15deg] opacity-70" />
+            <img src="/src/assets/rose-single.png" alt="" aria-hidden="true" width="1024" height="1024" loading="lazy" class="hidden md:block absolute -bottom-6 -right-4 w-24 rotate-[20deg] opacity-80" />
+            
+            <div id="phrases-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sorpresa" class="relative py-24 sm:py-36 px-6 sm:px-10 z-10">
+        <div class="reveal container mx-auto">
+          <div class="text-center max-w-2xl mx-auto">
+            <div class="inline-flex items-center gap-3 mb-4">
+              <span class="h-px w-8 bg-terracotta"></span>
+              <span class="text-[11px] uppercase tracking-[0.3em] text-terracotta">una sorpresa</span>
+              <span class="h-px w-8 bg-terracotta"></span>
+            </div>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-tight tracking-[-0.01em]">
+              Algo solo para ti
+            </h2>
+            <p class="mt-5 font-body text-lg text-ink-faded leading-relaxed">
+              Aviso: lo que pase a continuación es responsabilidad tuya.
+            </p>
+          </div>
+          
+          <div id="surprise-container" class="mt-20"></div>
+        </div>
+      </section>
+
+      <footer class="relative py-20 px-6 sm:px-10 z-10 text-center">
+        <div class="max-w-md mx-auto">
+          <div class="font-script text-4xl sm:text-5xl text-terracotta mb-4">siempre tuya,</div>
+          <div class="font-display italic text-2xl text-ink mb-8">tu Bubu</div>
+          <div class="flex items-center justify-center gap-3 text-ink-faded text-xs uppercase tracking-[0.3em]">
+            <span class="h-px w-10 bg-ink-faded/40"></span>
+            hecho con amor <3
+            <span class="h-px w-10 bg-ink-faded/40"></span>
+          </div>
+          <p class="mt-6 font-script text-lg text-rose-deep">
+            21 · agosto · 2025 — y todo lo que sigue ♥
+          </p>
+        </div>
+      </footer>
+
+      </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
